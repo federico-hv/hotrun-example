@@ -1,10 +1,10 @@
 const Koa = require('koa');
 const path = require('path');
 const app = new Koa();
-const emitter = require('hotrun')({
-	extensions: ['.js'],
-	watch: path.resolve(__dirname, './')
-});
+// const emitter = require('hotrun')({
+// 	extensions: ['.js'],
+// 	watch: path.resolve(__dirname, './')
+// });
 
 
 const index = require('./routes/index');
@@ -18,9 +18,9 @@ app.on('error', (err, ctx) => {
 	console.error('server error', err, ctx)
 });
 
-emitter.on('hot', () => {
-	console.log('module hot compiled done!')
-});
+// emitter.on('hot', () => {
+// 	console.log('module hot compiled done!')
+// });
 
 
 module.exports = app;

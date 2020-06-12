@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node init.js"
+    "start": "node init.js",
+    "watch":"npx nodejs-hot-reload entry=./init.js outDir=./build"
   },
   "keywords": [],
   "author": "",
